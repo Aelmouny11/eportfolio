@@ -1,0 +1,311 @@
+
+
+
+
+
+
+#  **PL/SQL** ORACLE
+
+
+
+
+***Pr*. Mohammed Snineh**
+
+
+# PL/SQL Procedures et Fonctions dans Oracle
+
+---
+
+## INTRODUCTION
+
+PL/SQL signifie Procedural Language extension of SQL (extension du langage de procédure de SQL). Il a été développé par Oracle Corporation à la fin des années 1980 pour améliorer les capacités de SQL. Il s'agit du langage d'extension procédurale de SQL.
+
+---
+
+## Structure des blocs PL/SQL :
+
+```sql
+DECLARE
+   Declaration statements;
+BEGIN
+   Execution statements;
+ EXCEPTION
+      Exception handling statements;
+END;
+/
+```
+#### Sections du bloc PL/SQL :
+
+1. Section de déclaration (optionnelle).
+2. Section d'exécution (obligatoire).
+3. Section de gestion des exceptions (facultative).
+---
+
+## Variables :
+
+
+### Syntax:
+```sql
+variable_name [CONSTANT] datatype [NOT NULL] [:= | DEFAULT initial_value]
+```
+**Constante**
+
+```sql
+constant_name CONSTANT datatype := VALUE;  
+```
+- Un nom de variable ne peut contenir plus de 30 caractères.
+- Un nom de variable doit commencer par une lettre ASCII suivie d'un chiffre, d'un trait de soulignement (_) ou d'un signe de dollar ($).
+- PL/SQL ne tient pas compte de la casse, c'est-à-dire que var et VAR font référence à la même variable.
+
+---
+
+
+### Exemple 
+```sql
+DECLARE
+   var1 integer := 20;
+   var2 integer := 40;
+   var3 integer;
+   var4 real;
+BEGIN
+   var3 := var1 + var2;
+   dbms_output.put_line('Value of var3: ' || var3);
+   var4 := 50.0/3.0;
+   dbms_output.put_line('Value of var4: ' || var4);
+END;
+/
+```
+
+---
+## Conditions 
+
+### IF-THEN
+```sql
+IF condition   
+THEN   
+   //Block of statements1
+END IF;
+```
+### IF-THEN-ELSE
+
+```sql
+IF condition   
+THEN  
+      //Block of statements1
+ELSE  
+      //Block of statements2
+END IF;
+```
+---
+### Exemple 
+```sql 
+DECLARE
+   var number(3) := 50;
+BEGIN
+   IF (var = 10) THEN
+      dbms_output.put_line('Value of var is 10');
+   ELSIF (var = 20) THEN
+      dbms_output.put_line('Value of var is 20');
+   ELSIF (var = 30) THEN
+      dbms_output.put_line('Value of var is 30');
+   ELSE
+       dbms_output.put_line('None of the above condition is true.');
+   END IF;
+   dbms_output.put_line('Exact value of var is: '|| var); 
+END;
+/
+```
+
+---
+### Boucle FOR
+
+```sql
+FOR loop_counter IN [REVERSE] start_value .. end_value
+LOOP
+   //block of statements.
+END LOOP;
+```
+### Exemple  
+```sql
+DECLARE  
+BEGIN  
+  FOR var IN 1..10
+  LOOP    
+    DBMS_OUTPUT.PUT_LINE(var);   
+  END LOOP;  
+END;
+```
+---
+### Boucle WHILE
+```sql
+WHILE condition
+ LOOP
+   //block of statements;
+ END LOOP;
+``` 
+
+### Exemple 
+```sql
+DECLARE  
+  num NUMBER := 1;  
+BEGIN  
+  WHILE num <= 10
+  LOOP    
+    DBMS_OUTPUT.PUT_LINE(num);   
+    num := num+1;
+  END LOOP;  
+END;
+```
+
+___
+
+## Introduction aux Procédures et Fonctions
+
+- Les procédures et fonctions sont des unités de programme réutilisables en PL/SQL.
+- Procédures : Effectuent une action spécifique ou un ensemble d'actions.
+- Fonctions : Retournent une seule valeur.
+- Les deux peuvent avoir des paramètres d'entrée et des paramètres de sortie.
+- Ils encapsulent la logique et améliorent la réutilisabilité du code.
+
+---
+
+## Création d'une Procédure
+
+```sql
+CREATE [OR REPLACE] PROCEDURE proc_name [list of parameters] 
+IS | AS    
+   //Declaration block 
+BEGIN    
+   //Execution block 
+EXCEPTION    
+  //Exception block 
+END;
+```
+### Exemple 
+
+```sql
+CREATE OR REPLACE PROCEDURE hello_world
+AS
+BEGIN
+   dbms_output.put_line('Hello World!');
+END;
+/
+```
+---
+### Execution
+```sql
+EXEC hello_world(); //Execution
+```
+**Ou**
+
+```sql
+BEGIN
+   procedure_name;
+END;
+/
+```
+
+---
+
+# Création d'une Fonction
+
+```sql
+CREATE [OR REPLACE] FUNCTION function_name [parameters] 
+RETURN return_datatype;  
+IS|AS
+	//Declaration block
+BEGIN  
+	Return return_variable; //Execution_block  
+EXCEPTION  
+	Return return_variable;  
+END; 
+ /
+```
+---
+### Exemple
+```sql
+create or replace function getMultiple(num1 in number, num2 in number)    
+return number    
+is     
+  num3 number(8);    
+begin    
+  num3 :=num1*num2;    
+  return num3;    
+end;    
+/
+```
+
+---
+## Appel d'une Fonction
+**Affectation**
+
+```sql
+result :=  getMultiple(4, 5);
+```
+**Avec Select**
+```sql
+SELECT getMultiple(4, 5) FROM dual;
+```
+**Dans PL/SQL**
+
+```cpp
+dbms_output.put_line(getMultiple(4, 5));
+```
+
+--- 
+
+
+## Curseurs 
+### Implicite
+Les curseurs implicites sont automatiquement générés par Oracle lors du traitement d'une instruction SQL lorsqu'aucun curseur explicite n'est utilisé pour l'instruction. Ils sont créés par défaut lors de l'exécution d'instructions DML telles que **DELETE**, **INSERT**, **UPDATE** et **SELECT**.
+
+### Attributs des curseurs implicites 
+- **%FOUND**
+- **%NOTFOUND**
+- **%ISOPEN**
+- **%ROWCOUNT**
+
+---
+### Explicite
+
+```sql
+CURSOR cur_students IS
+   SELECT rollNo, name, address FROM students;
+```
+### Fetching
+
+```sql
+FETCH cur_students INTO s_rollNo, s_name, s_address;
+```
+
+### Close
+```sql
+CLOSE cur_students;
+```
+---
+## Exemple
+```sql
+DECLARE
+   s_rollNo students.rollNo%type;
+   s_name students.name%type;
+   s_address students.address%type;
+   CURSOR cur_students is
+      SELECT rollNo, name, address FROM students;
+BEGIN
+   OPEN cur_students;
+   LOOP
+      FETCH cur_students into s_rollNo, s_name, s_address;
+      EXIT WHEN cur_students%notfound;
+      dbms_output.put_line(s_rollNo || ' ' || s_name || ' ' || s_address);
+   END LOOP;
+   CLOSE cur_students;
+END;
+/
+```
+---
+# Conclusion
+
+- Les procédures et fonctions en PL/SQL fournissent des unités de programme réutilisables.
+- Les procédures effectuent des actions, tandis que les fonctions retournent une seule valeur.
+- Les deux peuvent avoir des paramètres d'entrée et de sortie.
+- Ils encapsulent la logique et améliorent la réutilisabilité du code.

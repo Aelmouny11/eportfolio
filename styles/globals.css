@@ -4,7 +4,9 @@
 
 @layer base{
   img{
-    @apply rounded-xl;
+    @apply rounded-xl ;
+    page-break-inside: after;
+    
   }
   strong{
     @apply text-blue-500;

@@ -6,4 +6,83 @@ thumbnail: "/photo.jpg"
 import Link from "next/link";
 import HeroSection from "../components/Hero";
 
+
 <HeroSection />
+
+export const ProjectCard = ({image,title,description})=>{
+    return (<div className="card w-96 glass shadow-md">
+  <figure><img src={image} alt="car!" className="w-full"/></figure>
+  <div className="card-body">
+    <h2 className="card-title">{title}</h2>
+    <p>{description}</p>
+    <div className="card-actions justify-end">
+    </div>
+  </div>
+</div>)
+}
+
+
+
+{
+    <div class="px-2 w-full lg:px-12 space-y-2">
+    <br/>
+    <h1>PROJETS</h1>
+    <br/>
+    
+<div class="flex flex-wrap w-full gap-3 justify-evenly">
+<ProjectCard image="/projets/improblem.png" title="Maximisation d'influence dans les réseaux complexes Flask" description="Identifier les noeuds les plus importantes au sein d'un réseaux en utilisant l'algorithme AHP et les techniques d'analyse des réseaux."/>
+<ProjectCard image="/projets/compiler.jpg" title="Compilateur D'algorithme : (Flex ,Bison & C#)" description="Implementer un Compilateur qui permet d'exécuter le langage algorithmique"/>
+
+
+
+</div>
+<br/>
+<h1>ÉDUCATION</h1>
+    <br/>
+
+<div class="flex flex-wrap w-full gap-3 justify-evenly">
+<ProjectCard image="/projets/caddiayyad.png" title="Licence Fondamentale" description="Faculté des sciences Semlalia à Marrakech
+Science mathématiques et informatiques"/>
+<ProjectCard image="/projets/h2.jpeg" title="Bacclauréat en Sciences Mathématiques B" description="Lycée Hassan 2. Guéliz Marrakech"/>
+</div>
+    </div>
+}
+
+{
+    <div class="px-2 w-full lg:px-12 space-y-2">
+    <br/>
+    <h1>QUALITÉS</h1>
+    <br/>
+
+
+    <div class="chat chat-start">
+  <div class="chat-bubble chat-bubble-primary">Esprit d'équipe 👥
+</div>
+</div>
+<div class="chat chat-end">
+  <div class="chat-bubble chat-bubble-secondary">Créativité 💫💫
+</div>
+</div>
+<div class="chat chat-start">
+  <div class="chat-bubble chat-bubble-accent">Capacité à actualiser ses connaissances ✍️✍️
+</div>
+</div>
+<div class="chat chat-end">
+  <div class="chat-bubble chat-bubble-info">Système d'éxploitation: Linux et Windows 🦾🦾
+</div>
+</div>
+<div class="chat chat-start">
+  <div class="chat-bubble chat-bubble-success">Résolution des problèmes 🧠🧠
+</div>
+</div>
+<div class="chat chat-end">
+  <div class="chat-bubble chat-bubble-warning">
+Nouvelle technologie 💥💥
+  
+  </div>
+</div>
+<div class="chat chat-start">
+  <div class="chat-bubble chat-bubble-error">Lecture  📘 📚 </div>
+</div>
+    </div>
+}
