@@ -1,9 +1,47 @@
 # Lycée Qualifiant Mohammed 6 - Marrakech
 
+import Image from "next/image";
+import { useState } from "react";
+
 ![Lycee](/m6.jpg)
 
 export const But = () => {
 	return <button className="btn">Voir</button>;
 };
 
+---
+
 <But />
+
+export const CardGallery = () => {
+const images=[{name:"sport",path:"/sport.jpg"},{name:"pavement",path:"/pavement.jpg"},{name:"lobby",path:"/lobby.jpg"},{name:"bts",path:"/bts.jpg"},{name:"entrance",path:"/entrance.jpg"}];
+  const [selectedImage, setSelectedImage] = useState(null);
+
+return (
+
+<div className="flex justify-evenly gap-4 flex-wrap">
+	{images.map((image, index) => (
+		<Card
+			img={`/iloveimg-compressed${image.path}`}
+			alt={`Image ${index}`}
+			text={image.name}
+		/>
+	))}
+</div>
+); };
+
+<CardGallery />
+
+export const Card = ({ img, text }) => {
+	return (
+		<div className="relative w-80 h-80 group ">
+			<Image src={img} fill />
+			<div className="w-full h-full absolute rounded-xl bg-slate-800/40 group-hover:flex hidden transition duration-700  items-center justify-center">
+				{" "}
+				<h1 className="text-blue-400 font-extrabold text-4xl uppercase">
+					{text}
+				</h1>
+			</div>
+		</div>
+	);
+};

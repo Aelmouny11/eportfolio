@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
 export default {
@@ -5,14 +6,16 @@ export default {
 		title: "Dans Ce page",
 	},
 	editLink: { text: "" },
-	logo: (
-		<h1 className="text-5xl font-bold ">
-			<span className="text-blue-500">e</span>
-			PORTFOLIO
-		</h1>
-	),
+	logo: <Image src={"/logo.png"} width={50} height={50} />,
 	project: {
 		link: "https://github.com/shuding/nextra",
+	},
+	footer: {
+		text: (
+			<div>
+				<Image src={"/logo.png"} width={50} height={50} />
+			</div>
+		),
 	},
 	darkMode: true,
 	sidebar: {
