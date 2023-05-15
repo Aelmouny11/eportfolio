@@ -76,7 +76,7 @@ export default {
 					property="twitter:description"
 					content="This the personal portfolio of Azddine Elmoumny, which summarizes everything he had studied in CERMEF"
 				/>
-				<meta property="twitter:image" content="/logo" />
+				<meta property="twitter:image" content="/logo.png" />
 			</>
 		);
 	},
