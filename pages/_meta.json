@@ -1,0 +1,30 @@
+{
+"index":{
+    "title":"Acceuil",
+    "type":"page",
+    "theme":{
+        "layout":"raw",
+        "navbar": true
+    }
+    
+}   ,
+"msp": {
+    "title": "MSP",
+    "type": "menu",
+    "items": {
+      "college": {
+        "title": "Collége",
+        "href": "/msp/college"
+      },
+      "lycee": {
+        "title": "Lycée",
+        "href": "/msp/lycee"
+      },
+      "contact": {
+        "title": "Contact Us",
+        "href": "mailto:elmoumny.azddine@gmail.com"
+      }
+    }
+  }
+
+}

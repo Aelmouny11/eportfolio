@@ -1,0 +1,58 @@
+---
+title: "Elmoumny Azddine"
+thumbnail: "/photo.jpg"
+---
+
+import Image from "next/image";
+import Link from "next/link";
+
+export const HeroSection = () => {
+	return (
+		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 min-h-screen grid">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+				<div className="flex flex-col justify-center gap-4">
+					<h1 className="text-4xl sm:text-5xl md:text-7xl uppercase font-bold  mb-6">
+						<span className="text-blue-500">Elmoumny</span>{" "}
+						<span className="">Azddine</span>
+					</h1>
+					<p className="text-lg sm:text-xl md:text-2xl  mb-8 ">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						Ut semper porttitor velit non malesuada. Fusce sit amet
+						lacus sit amet quam pharetra feugiat.
+					</p>
+					<div>
+						<Link
+							href="/msp"
+							className="inline-block bg-blue-500 text-white font-semibold rounded-lg px-6 py-3 mr-4 transition lg:py-5 duration-500 ease-in-out hover:bg-blue-600"
+						>
+							Call to Action
+						</Link>
+						<Link
+							href="/msp"
+							className="inline-block bg-transparent text-blue-500 font-semibold border border-blue-500 rounded-lg px-6 py-3 lg:py-5 transition duration-500 ease-in-out hover:bg-blue-500 hover:text-white"
+						>
+							Secondary Action
+						</Link>
+					</div>
+				</div>
+				<div className="flex justify-center md:justify-end relative">
+					<div
+						className="rounded-[4rem] h-64 w-64 md:h-full md:w-full absolute blur-lg -z-1 bg-gradient-to-r from-indigo-500 via-green-600 to-violet-500"
+						style={{ filter: "blur(10px)" }}
+					></div>
+					<Image
+						src="/photo.jpg"
+						alt="Hero Image"
+						className="rounded-[4rem] h-64 w-64 md:h-80 md:w-80 z-10 m-1"
+						layout="responsive"
+						width={400}
+						height={400}
+						priority={true}
+					/>
+				</div>
+			</div>
+		</div>
+	);
+};
+
+<HeroSection />
