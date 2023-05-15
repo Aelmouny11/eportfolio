@@ -53,6 +53,7 @@ export default {
 					name="description"
 					content="This the personal portfolio of Azddine Elmoumny, which summarizes everything he had studied in CERMEF"
 				/>
+
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content={url} />
 				<meta
@@ -64,6 +65,7 @@ export default {
 					content="This the personal portfolio of Azddine Elmoumny, which summarizes everything he had studied in CERMEF"
 				/>
 				<meta property="og:image" content="/logo.png" />
+
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:url" content={url} />
 				<meta
@@ -74,8 +76,7 @@ export default {
 					property="twitter:description"
 					content="This the personal portfolio of Azddine Elmoumny, which summarizes everything he had studied in CERMEF"
 				/>
-				<meta property="twitter:image" content="/logo.png" />
-				/>
+				<meta property="twitter:image" content="/logo" />
 			</>
 		);
 	},
