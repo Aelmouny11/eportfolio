@@ -1,17 +1,35 @@
 # Lycée Qualifiant Mohammed 6 - Marrakech
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
+import { HiLocationMarker, HiGlobe } from "react-icons/hi";
 
-![Lycee](/m6.jpg)
+{
 
-export const But = () => {
-	return <button className="btn">Voir</button>;
-};
+<div class="space-y-1">
+	<div class="flex items-center gap-4">
+		<HiLocationMarker size={24} className="text-blue-500" />
+		Av. Mohammadia, Marrakech 40150
+	</div>
+
+    <div class="flex items-center gap-4">
+    	<HiGlobe size={24} className="text-blue-500" />
+    	<Link href="http://l-mohammedvi.marrakech.men.gov.ma/">http://l-mohammedvi.marrakech.men.gov.ma/</Link>
+    </div>
+
+</div>
+}
+
+![Lycee](/lycee.jpg)
+
+Le lycée M6 existe à Marrakech, c'est un lycée technique, il a donc des filières telles que :
+
+-   Les fillières Téchnologique
+-   Sciences Mathématique
+-   BTS
 
 ---
-
-<But />
 
 export const CardGallery = () => {
 const images=[{name:"sport",path:"/sport.jpg"},{name:"pavement",path:"/pavement.jpg"},{name:"lobby",path:"/lobby.jpg"},{name:"bts",path:"/bts.jpg"},{name:"entrance",path:"/entrance.jpg"}];
@@ -30,6 +48,8 @@ return (
 </div>
 ); };
 
+## Highlights
+
 <CardGallery />
 
 export const Card = ({ img, text }) => {
@@ -45,3 +65,5 @@ export const Card = ({ img, text }) => {
 		</div>
 	);
 };
+ 
+## Cadres et enseignats
