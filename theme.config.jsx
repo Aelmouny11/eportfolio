@@ -7,9 +7,6 @@ export default {
 	},
 	editLink: { text: "" },
 	logo: <Image src={"/logo.png"} width={50} height={50} />,
-	project: {
-		link: "https://github.com/shuding/nextra",
-	},
 	footer: {
 		text: (
 			<div>

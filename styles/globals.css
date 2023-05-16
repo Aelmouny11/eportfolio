@@ -6,6 +6,9 @@
   img{
     @apply rounded-xl;
   }
+  strong{
+    @apply text-blue-500;
+  }
 }
 
 :root {

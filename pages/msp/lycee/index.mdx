@@ -1,0 +1,57 @@
+# Lycée Qualifiant Mohammed 6 - Marrakech
+
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { HiLocationMarker, HiGlobe } from "react-icons/hi";
+import { CardGallery, MyDialog } from "../../../components/Lycee";
+
+{
+
+<div class="space-y-1">
+	<div class="flex items-center gap-4">
+		<HiLocationMarker size={24} className="text-blue-500" />
+		Av. Mohammadia, Marrakech 40150
+	</div>
+
+    <div class="flex items-center gap-4">
+    	<HiGlobe size={24} className="text-blue-500" />
+    	<Link href="http://l-mohammedvi.marrakech.men.gov.ma/">http://l-mohammedvi.marrakech.men.gov.ma/</Link>
+    </div>
+
+</div>
+}
+
+![Lycee](/msp/porte.png)
+
+Le lycée M6 existe à Marrakech, c'est un lycée technique, il a donc des filières telles que :
+
+-   Les fillières Téchnologique
+-   Sciences Mathématique
+-   BTS
+
+---
+
+## Highlights
+
+<CardGallery />
+
+## Cadres et enseignats
+
+![Cadres et enseignats](/msp/stafs.png)
+
+## Statistiques
+
+### Distributions des élèves Internes Selon le genre
+
+![Cadres et enseignats](/msp/stats_inetrnat_sex.png)
+
+### Distributions des élèves Internes Selon les niveaux
+
+![Cadres et enseignats](/msp/stats_internat_parniveau.png)
+
+### Distributions des élèves Selon les niveaux
+
+![Cadres et enseignats](/msp/statsparniveau.png)
+
+{/* <MyDialog /> */}
