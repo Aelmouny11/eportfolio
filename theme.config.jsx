@@ -7,9 +7,12 @@ export default {
 	},
 	editLink: { text: "" },
 	logo: <Image src={"/logo.png"} width={50} height={50} />,
+	project: {
+		link: "https://github.com/aelmouny11/eportfolio",
+	},
 	footer: {
 		text: (
-			<div>
+			<div className="print:hidden">
 				<Image src={"/logo.png"} width={50} height={50} />
 			</div>
 		),
