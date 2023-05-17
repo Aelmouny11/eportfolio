@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
+import Footer from './components/Footer'
 export default {
 	toc: {
 		title: "Dans Ce page",
@@ -12,9 +13,7 @@ export default {
 	},
 	footer: {
 		text: (
-			<div className="print:hidden">
-				<Image src={"/logo.png"} width={50} height={50} />
-			</div>
+			<Footer/>
 		),
 	},
 	darkMode: true,

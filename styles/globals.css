@@ -11,6 +11,7 @@
   strong{
     @apply text-blue-500;
   }
+ 
 }
 
 :root {
@@ -38,3 +39,4 @@ body {
   color: rgb(var(--foreground-rgb));
   
 }
+
