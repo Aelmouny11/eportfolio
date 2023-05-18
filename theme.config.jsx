@@ -2,12 +2,20 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
 import Footer from "./components/Footer";
-export default {
+// import CustomHead from "./components/CustomHead";
+const themeconfig = {
 	toc: {
 		title: "Dans Ce page",
 	},
 	editLink: { text: "" },
-	logo: <Image src={"/logo.png"} width={50} height={50} />,
+	logo: (
+		<Image
+			src={"/logo.png"}
+			width={50}
+			height={50}
+			alt="Azdddine's ePortfolio Logo"
+		/>
+	),
 	project: {
 		link: "https://github.com/aelmouny11/eportfolio",
 	},
@@ -24,57 +32,46 @@ export default {
 	head: () => {
 		const { asPath, defaultLocale, locale } = useRouter();
 		const { frontMatter } = useConfig();
-		const url =
-			"https://eportfolio-elmoumny.vercel.app/" +
-			(defaultLocale === locale ? asPath : `/${locale}${asPath}`);
+		const basePath = useRouter().basePath;
+		const url = `${basePath}${asPath}`;
 
 		return (
 			<>
 				<meta property="og:url" content={url} />
-				{/* <meta
+				<meta
 					property="og:title"
 					content={frontMatter.title || "Elmoumny"}
-				/> */}
+				/>
 				<meta
 					property="og:description"
 					content={frontMatter.description || "Emoumny's portfolio"}
 				/>
-				<title>
-					Elmoumny Azddine — ePortfolio Cermef Marrakech 💥 💥 
-				</title>
+				<title>{frontMatter.title} — ePortfolio Cermef Marrakech</title>
 				<meta
 					name="title"
-					content="Elmoumny Azddine — ePortfolio Cermef Marrakech 💥 💥 "
+					content={`${frontMatter.title} — ePortfolio Cermef Marrakech`}
 				/>
 				<meta
 					name="description"
-					content="This the personal portfolio of Azddine Elmoumny, which summarizes everything he had studied in CERMEF"
+					content="This is the personal portfolio of Azddine Elmoumny, which summarizes everything he had studied in CERMEF"
 				/>
 
 				<meta property="og:type" content="website" />
-				<meta property="og:url" content={url} />
-				<meta
-					property="og:title"
-					content="Elmoumny Azddine — ePortfolio Cermef Marrakech 💥 💥 "
-				/>
-				<meta
-					property="og:description"
-					content="This the personal portfolio of Azddine Elmoumny, which summarizes everything he had studied in CERMEF"
-				/>
 				<meta property="og:image" content="/logo.png" />
 
 				<meta property="twitter:card" content="summary_large_image" />
 				<meta property="twitter:url" content={url} />
 				<meta
 					property="twitter:title"
-					content="Elmoumny Azddine — ePortfolio Cermef Marrakech 💥 💥 "
+					content={`${frontMatter.title} — ePortfolio Cermef Marrakech`}
 				/>
 				<meta
 					property="twitter:description"
-					content="This the personal portfolio of Azddine Elmoumny, which summarizes everything he had studied in CERMEF"
+					content="This is the personal portfolio of Azddine Elmoumny, which summarizes everything he had studied in CERMEF"
 				/>
 				<meta property="twitter:image" content="/logo.png" />
 			</>
 		);
 	},
 };
+export default themeconfig;
