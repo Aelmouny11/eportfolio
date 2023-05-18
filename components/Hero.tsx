@@ -21,16 +21,16 @@ const HeroSection = () => {
 					</p>
 					<div>
 						<Link
-							href="/msp"
+							href="/msp/lycee"
 							className="inline-block px-6 py-3 mr-4 font-semibold text-white transition duration-500 ease-in-out bg-blue-500 rounded-lg lg:py-5 hover:bg-blue-600 "
 						>
-							Call to Action
+							Voir MSP &rarr;
 						</Link>
 						<Link
-							href="/msp"
+							href="/semestre1/Plannification"
 							className="inline-block px-6 py-3 font-semibold text-blue-500 transition duration-500 ease-in-out bg-transparent border border-blue-500 rounded-lg lg:py-5 hover:bg-blue-500 hover:text-white"
 						>
-							Secondary Action
+							Modules
 						</Link>
 					</div>
 				</div>
