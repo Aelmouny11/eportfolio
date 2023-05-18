@@ -6,34 +6,33 @@ thumbnail: "/photo.jpg"
 import Link from "next/link";
 import HeroSection from "../components/Hero";
 
-
 <HeroSection />
 
-export const ProjectCard = ({image,title,description})=>{
-    return (<div className="card w-96 glass shadow-md">
-  <figure><img src={image} alt="car!" className="w-full"/></figure>
-  <div className="card-body">
-    <h2 className="card-title">{title}</h2>
-    <p>{description}</p>
-    <div className="card-actions justify-end">
-    </div>
-  </div>
-</div>)
-}
-
-
+export const ProjectCard = ({ image, title, description }) => {
+	return (
+		<div className="card  lg:w-96 glass shadow-md">
+			<figure>
+				<img src={image} alt="car!" className="w-full" />
+			</figure>
+			<div className="card-body">
+				<h2 className="card-title">{title}</h2>
+				<p>{description}</p>
+				<div className="card-actions justify-end"></div>
+			</div>
+		</div>
+	);
+};
 
 {
-    <div class="px-2 w-full lg:px-12 space-y-2">
-    <br/>
-    <h1>PROJETS</h1>
-    <br/>
-    
-<div class="flex flex-wrap w-full gap-3 justify-evenly">
+
+<div class="px-1 md:px-4 w-full lg:px-12 space-y-2">
+<br/>
+<h1>PROJETS</h1>
+<br/>
+
+<div class="flex flex-wrap w-full gap-3 lg:justify-evenly">
 <ProjectCard image="/projets/improblem.png" title="Maximisation d'influence dans les réseaux complexes Flask" description="Identifier les noeuds les plus importantes au sein d'un réseaux en utilisant l'algorithme AHP et les techniques d'analyse des réseaux."/>
 <ProjectCard image="/projets/compiler.jpg" title="Compilateur D'algorithme : (Flex ,Bison & C#)" description="Implementer un Compilateur qui permet d'exécuter le langage algorithmique"/>
-
-
 
 </div>
 <br/>
@@ -49,13 +48,14 @@ Science mathématiques et informatiques"/>
 }
 
 {
-    <div class="px-2 w-full lg:px-12 space-y-2">
-    <br/>
-    <h1>QUALITÉS</h1>
-    <br/>
 
+<div class="px-2 w-full lg:px-12 space-y-2">
+<br/>
+<h1>QUALITÉS</h1>
+<br/>
 
     <div class="chat chat-start">
+
   <div class="chat-bubble chat-bubble-accent">Esprit d'équipe 👥
 </div>
 </div>

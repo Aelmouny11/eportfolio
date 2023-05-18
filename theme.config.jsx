@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
 export default {
 	toc: {
 		title: "Dans Ce page",
@@ -12,9 +12,7 @@ export default {
 		link: "https://github.com/aelmouny11/eportfolio",
 	},
 	footer: {
-		text: (
-			<Footer/>
-		),
+		text: <Footer />,
 	},
 	darkMode: true,
 	sidebar: {
