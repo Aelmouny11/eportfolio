@@ -11,7 +11,9 @@
   strong{
     @apply text-blue-500;
   }
- 
+ a{
+  @apply text-blue-500;
+ }
 }
 
 :root {

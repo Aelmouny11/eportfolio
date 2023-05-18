@@ -3,7 +3,7 @@ import { Fragment } from "react";
 
 const Footer = () => {
 	return (
-		<div className="flex flex-wrap justify-center w-full">
+		<div className="flex flex-wrap justify-center w-full print:hidden">
 			<footer className="footer p-10  ">
 				<div>
 					<span className="footer-title">Contact</span>
@@ -60,7 +60,7 @@ const Footer = () => {
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
-								height="24" 
+								height="24"
 								viewBox="0 0 24 24"
 								className="fill-current"
 							>
