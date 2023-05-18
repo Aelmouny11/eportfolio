@@ -4,8 +4,7 @@
 
 @layer base{
   img{
-    @apply rounded-xl ;
-    page-break-inside: after;
+    @apply rounded-xl  print:break-after-avoid print:block;
     
   }
   strong{

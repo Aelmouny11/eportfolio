@@ -13,7 +13,7 @@ const themeconfig = {
 			src={"/logo.png"}
 			width={50}
 			height={50}
-			alt="Azdddine's ePortfolio Logo bg-white rounded-full"
+			alt="Azdddine's ePortfolio Logo bg-white rounded-full bg-white"
 		/>
 	),
 	project: {
