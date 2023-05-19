@@ -12,8 +12,9 @@ const themeconfig = {
 	logo: (
 		<Image
 			src={"/logo.png"}
-			width={32}
-			height={32}
+			width={40}
+			height={40}
+			responsive
 			alt="Azdddine's ePortfolio Logo bg-white rounded-full bg-white"
 		/>
 	),
