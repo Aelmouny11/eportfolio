@@ -89,7 +89,7 @@ const themeconfig = {
 				<meta property="og:image" content="/logo.png" />
 
 				<meta property="twitter:card" content="summary_large_image" />
-				<meta property="twitter:url" content={url} />
+				<meta property="twitter:url" content={url + "/thumbnail.png"} />
 				<meta
 					property="twitter:title"
 					content={`${frontMatter.title} — ePortfolio Cermef Marrakech`}
