@@ -1,4 +1,6 @@
+
 import Image from "next/image";
+import { title } from "process";
 import { Fragment, useState } from "react";
 import { HiOutlineArrowsExpand } from "react-icons/hi";
 

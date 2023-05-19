@@ -4,6 +4,7 @@ import { useConfig } from "nextra-theme-docs";
 import Footer from "./components/Footer";
 // import CustomHead from "./components/CustomHead";
 const themeconfig = {
+	nextThemes: { defaultTheme: "dark" },
 	toc: {
 		title: "Dans Ce page",
 	},
@@ -11,8 +12,8 @@ const themeconfig = {
 	logo: (
 		<Image
 			src={"/logo.png"}
-			width={50}
-			height={50}
+			width={32}
+			height={32}
 			alt="Azdddine's ePortfolio Logo bg-white rounded-full bg-white"
 		/>
 	),
@@ -28,6 +29,15 @@ const themeconfig = {
 	},
 	search: {
 		placeholder: "Rechercher Les Documents...",
+
+		emptyResult: (
+			<span
+				className="w-full h-ful fle
+		 items-center justify-center bg-blue-300"
+			>
+				Aucune Resultat
+			</span>
+		),
 	},
 	head: () => {
 		const { asPath, defaultLocale, locale } = useRouter();

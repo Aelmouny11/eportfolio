@@ -27,7 +27,7 @@ const HeroSection = () => {
 							Voir MSP &rarr;
 						</Link>
 						<Link
-							href="/semestre1/Plannification"
+							href="/semestre1/plannification"
 							className="inline-block px-6 py-3 font-semibold text-blue-500 transition duration-500 ease-in-out bg-transparent border border-blue-500 rounded-lg lg:py-5 hover:bg-blue-500 hover:text-white"
 						>
 							Modules

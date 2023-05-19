@@ -1,12 +1,22 @@
-import { isMobile } from "react-device-detect";
+import { isMobile, browserName } from "react-device-detect";
 
 export const Download = () => {
+	function PrintPage() {
+		if (browserName == "Chrome") {
+			window.print();
+			return true;
+		}
+		alert(
+			"Téléchargement est Disponible seulement sur  Navigateur  Chrome."
+		);
+		return false;
+	}
 	if (!isMobile) {
 		return (
 			<div className="flex items-center justify-end w-full print:hidden">
 				<button
 					className="flex items-center gap-2 p-1 btn-ghost"
-					onClick={() => window.print()}
+					onClick={() => PrintPage()}
 				>
 					Télécharger
 					<svg
