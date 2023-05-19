@@ -4,7 +4,7 @@
 
 @layer base{
   img{
-    @apply rounded-xl  print:break-inside-avoid print:block;
+    @apply rounded-xl  print:break-inside-avoid print:block w-full;
     
   }
   strong{
@@ -12,6 +12,9 @@
   }
  a{
   @apply text-blue-500;
+ }
+ table {
+  @apply w-full;
  }
 }
 

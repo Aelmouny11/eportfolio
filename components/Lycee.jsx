@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { title } from "process";
 import { Fragment, useState } from "react";
@@ -13,7 +12,7 @@ export const CardGallery = () => {
 	];
 
 	return (
-		<div className="flex flex-wrap gap-4 justify-evenly">
+		<div className="flex flex-wrap gap-4 justify-evenly py-2">
 			{images.map((image, index) => (
 				<Card
 					img={`/iloveimg-compressed${image.path}`}
@@ -29,7 +28,7 @@ export const Card = ({ img, text }) => {
 	const [isOpen, setOpen] = useState(false);
 	return (
 		<Fragment>
-			<div className="relative w-80 h-80 group ">
+			<div className="relative w-full sm:w-96 h-96 group ">
 				<Image src={img} fill alt={text} />
 				<div className="absolute flex-col items-center justify-center hidden w-full h-full transition duration-700 rounded-xl bg-slate-800/40 group-hover:flex">
 					{" "}
