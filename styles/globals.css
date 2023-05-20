@@ -2,32 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  img{
-    @apply rounded-xl  print:break-inside-avoid print:block w-full;
-    
+@layer base {
+  img {
+    @apply w-full  rounded-xl print:block print:break-inside-avoid;
   }
-  strong{
+  strong {
     @apply text-blue-500;
   }
- a{
-  @apply text-blue-500;
- }
- table {
-  @apply w-full rounded-lg border-collapse ;
- }
- thead {
-  @apply bg-blue-500/30 rounded-t-lg; 
- }
- th:first-child{
-  @apply rounded-tl-lg;
- }
- table tbody {
-  @apply rounded-b-lg;
-  
- }
-
-
+  a {
+    @apply text-blue-500;
+  }
+  table {
+    @apply w-full border-collapse rounded-lg;
+  }
+  thead {
+    @apply rounded-t-lg bg-blue-500/30;
+  }
+  th:first-child {
+    @apply rounded-tl-lg;
+  }
+  table tbody {
+    @apply rounded-b-lg;
+  }
 }
 
 :root {
@@ -53,6 +49,4 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  
 }
-

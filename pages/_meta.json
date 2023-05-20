@@ -1,35 +1,35 @@
 {
-	"cermef": {
-		"title": "CERMEF",
-		"type": "page"
-	},
-	"index": {
-		"title": "ACCEUIL",
-		"type": "page",
-		"theme": {
-			"layout": "full",
-			"navbar": true
-		}
-	},
+  "cermef": {
+    "title": "CERMEF",
+    "type": "page"
+  },
+  "index": {
+    "title": "ACCEUIL",
+    "type": "page",
+    "theme": {
+      "layout": "full",
+      "navbar": true
+    }
+  },
 
-	"msp": {
-		"title": "MSP",
-		"type": "menu",
-		"items": {
-			"college": {
-				"title": "Collége",
-				"href": "/msp/college"
-			},
-			"lycee": {
-				"title": "Lycée",
-				"href": "/msp/lycee"
-			},
-			"contact": {
-				"title": "Contact Us",
-				"href": "mailto:elmoumny.azddine@gmail.com"
-			}
-		}
-	},
-	"semestre1": "Semestre 1",
-	"Semestre-2": "Semestre 2"
+  "msp": {
+    "title": "MSP",
+    "type": "menu",
+    "items": {
+      "college": {
+        "title": "Collége",
+        "href": "/msp/college"
+      },
+      "lycee": {
+        "title": "Lycée",
+        "href": "/msp/lycee"
+      },
+      "contact": {
+        "title": "Contact Us",
+        "href": "mailto:elmoumny.azddine@gmail.com"
+      }
+    }
+  },
+  "semestre1": "Semestre 1",
+  "Semestre-2": "Semestre 2"
 }

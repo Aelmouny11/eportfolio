@@ -3,10 +3,10 @@ import Link from "next/link";
 
 const HeroSection = () => {
 	return (
-		<div className="grid min-h-screen px-1 py-24 mx-auto max-w-7xl sm:px-6 lg:px-8">
+		<div className="grid min-h-screen px-1  mx-auto max-w-7xl sm:px-6 lg:px-8 py-24">
 			<div className="grid items-center grid-cols-1 gap-8 lg:grid-cols-2">
 				<div className="flex flex-col justify-center gap-4">
-					<h1 className="mb-6 text-3xl font-bold uppercase md:text-5xl lg:text-7xl 	">
+					<h1 className="mb-6 text-3xl font-bold uppercase md:text-5xl lg:text-7xl">
 						<span className="text-blue-500">Elmoumny</span>{" "}
 						<span className="">Azddine</span>
 					</h1>
@@ -15,9 +15,9 @@ const HeroSection = () => {
 						connexes. En outre, j'admire l'utilisation des nouvelles
 						technologies et les met en œuvre au quotidien pour
 						assurer l'optimisation de toutes les activités
-						quotidiennes. Maintenant, je suis un enseignant stagiaire en
-						enseignement de l'informatique au centre CRMEF à
-						Marrakech.
+						quotidiennes. Maintenant, je suis un enseignant
+						stagiaire en enseignement de l'informatique au centre
+						CRMEF à Marrakech.
 					</p>
 					<div>
 						<Link
