@@ -15,7 +15,7 @@ const HeroSection = () => {
 						connexes. En outre, j'admire l'utilisation des nouvelles
 						technologies et les met en œuvre au quotidien pour
 						assurer l'optimisation de toutes les activités
-						quotidiennes. Maintenant, je suis un stagiaire en
+						quotidiennes. Maintenant, je suis un enseignant stagiaire en
 						enseignement de l'informatique au centre CRMEF à
 						Marrakech.
 					</p>

@@ -14,8 +14,20 @@
   @apply text-blue-500;
  }
  table {
-  @apply w-full;
+  @apply w-full rounded-lg border-collapse ;
  }
+ thead {
+  @apply bg-blue-500/30 rounded-t-lg; 
+ }
+ th:first-child{
+  @apply rounded-tl-lg;
+ }
+ table tbody {
+  @apply rounded-b-lg;
+  
+ }
+
+
 }
 
 :root {
