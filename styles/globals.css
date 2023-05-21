@@ -4,8 +4,8 @@
 
 @layer base {
   body {
-      @apply text-lg leading-6;
-    }
+    @apply leading-6 md:text-lg;
+  }
   img {
     @apply w-full  rounded-xl print:block print:break-inside-avoid;
   }
@@ -27,14 +27,14 @@
   table tbody {
     @apply rounded-b-lg;
   }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      @apply capitalize;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply capitalize;
+  }
 }
 
 :root {

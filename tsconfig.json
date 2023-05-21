@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "theme.config.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "theme.config.jsx", "pages/api/SavePdf.jsx"],
   "exclude": ["node_modules"]
 }
