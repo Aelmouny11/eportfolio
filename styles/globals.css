@@ -27,6 +27,14 @@
   table tbody {
     @apply rounded-b-lg;
   }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply capitalize;
+    }
 }
 
 :root {

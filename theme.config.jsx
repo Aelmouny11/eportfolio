@@ -4,6 +4,7 @@ import { useConfig } from "nextra-theme-docs";
 import Footer from "./components/Footer";
 // import CustomHead from "./components/CustomHead";
 const themeconfig = {
+
   nextThemes: { defaultTheme: "dark" },
   toc: {
     title: "Dans Ce page",

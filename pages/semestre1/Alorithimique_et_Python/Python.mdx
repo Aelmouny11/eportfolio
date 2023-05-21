@@ -1,0 +1,547 @@
+---
+title : "Python"
+---
+
+# **Python**
+
+*Pr. Sninenh Mohemmed*
+
+import {Download} from "@/components/Download"
+
+<Download/>
+
+![Python](/modules/python.jpg)
+
+
+Python est un langage portable, dynamique, extensible, gratuit, qui permet une
+approche modulaire et orientée objet de la programmation
+
+
+## Les concepts de la programmation Python
+
+### Données et variables
+
+-  Un nom de variable est une séquence de lettres (a $\rightarrow$ z , A $
+\rightarrow$ Z) et de chiffres (0 $\rightarrow$ 9), qui doit toujours commencer par une lettre.
+-  La casse est significative
+### Types de variables
+
+-  Les données numériques
+-  Les chaînes de caractères
+-  Les listes
+-  Les dictionnaires
+-  …
+### Affectation des variables
+```py
+M=12
+Chaine="Bonjour"
+```
+
+### Affectations multiples et parallèles
+```py
+
+a=b=8 #: affecter une valeur a plusieurs variables simultanément
+i, j = 3, 2 #: affectations parallèles
+```
+
+
+
+### Opérateurs et expressions
+
+-  -, +, /, *
+-  // : division entière
+
+-  \* : exposant
+-  % : modulo fournit le reste de la division
+-  ==, !=,
+Les commentaires : #
+
+
+### Les entrées
+```py
+input()#: renvoie toujours une chaine de caractères
+a=input("a")
+```
+
+### Les fonctions de conversions
+```py
+int()
+float()
+str()
+```
+
+
+### Les sorties
+```py
+print()
+print("Message")
+print("Message",Variable)
+print("Bonjour",expression)
+```
+
+### Instruction de branchement
+```py
+if Condition:
+    # Séquence1
+else:
+    # Séquence2
+
+if Condition1:
+    # instructions
+elif Condition2:
+    # bloc_instructions
+else:
+    # autre_bloc_instructions
+```
+
+
+### Imbrication des instructions de branchement
+```py
+if Condition1:
+    # …
+    if Condition2:
+        # …
+        if Condition3:
+        # …
+        elif:
+            # Séquences
+        else:
+            # autres Séquences
+```
+
+
+### Les boucles
+
+- L’instruction while
+```py
+while condition:
+    # instruction(s)
+```
+
+- L’instruction For
+```py
+for i in range(n):
+    # instructions
+```
+```py filename="counter.py"
+i=1
+while i<6:
+    print(i)
+    i+=1
+# Avec for
+for i in range(1,6):
+    print(i)
+```
+
+**Remarque :**
+
+L’instruction range fournit une liste de valeurs.
+Exemples :
+
+- `range(6)` : représente la liste des valeurs : 0,1, 2, 3, 4, 5
+- `range (1,6)` : représente la liste des valeurs : 1, 2, 3, 4, 5
+- `range (1, 6,1)` : représente la liste des valeurs : 1, 2, 3, 4, 5
+- `range (1,6, 2)` : représente la liste des valeurs : 1,3,5
+- `range(6,5,-1)` : représente la valeur suivante : 6
+
+
+### Imbrication des boucles
+
+- L’instruction while
+```py
+while condition1:
+    # instruction(s)
+    while condition2:
+        # instruction(s)
+```
+
+L’instruction For
+```py
+for i in range(n):
+    print(i)
+    for j in range(m):
+        print(j)
+```
+
+
+- principaux types de données
+- Les données numériques Le type `integer`, `float`
+- La fonction `type()` nous permet de vérifier le type de la variable
+
+**Exemple**
+```py
+a=5
+print (type(a)) # integer
+b=5.5
+print (type(b)) # float
+c='bonjour'
+print(type(c)) # string
+```
+
+
+## Programmation Modulaire Python
+
+- Certains problèmes conduisent à des programmes longs, difficiles à écrire et à comprendre. On les découpe en des parties appelées sous programmes ou modules.
+
+- Les fonctions et les procédures sont des modules (groupe
+d'instructions) indépendants désignés par un nom. Elles ont plusieurs
+intérêts :
+    -  permettent de "factoriser" les programmes, càd de mettre en commun les parties qui se répètent 
+    -  permettent une structuration et une meilleure lisibilité des programmes 
+    -  facilitent la maintenance du code
+    -  ces procédures et fonctions peuvent éventuellement être réutilisées
+dans d'autres programmes.
+
+
+
+### Fonctions prédéfinies :
+La fonction `input()` : Interaction avec l’utilisateur
+
+La fonction `print()` : affiche n’importe quel nombre de valeurs fournies en arguments
+
+### Importer un module de fonctions
+Les modules sont des fichiers qui regroupent des ensembles de fonctions.
+
+**Exemple :**
+```py
+from math import *
+# Ou
+from math import pi,sqrt
+```
+
+
+## Les fonctions
+
+Définition d’une fonction en python
+```py
+def nomdefonction ( arg1, arg2, … ,argk) :
+    # bloc_instructions
+    return [] # [return_value]
+```
+
+
+Appel d'une fonction
+```py
+NomDeFonction( exp1, exp2, ... expk )
+```
+
+
+**Exemple :** la somme des carrés
+```py
+def sommeCarre ( x, y) :
+    sc = x**2 + y**2
+    return sc
+```
+
+Appel d'une fonction
+
+```shell
+SommeCarre(2,5)
+```
+```py
+a=3
+b=5
+SommeCarre(a,b)
+print(sommeCarre(a,b))
+```
+
+
+
+En Python, on peut utiliser les tuples pour renvoyer plusieurs valeurs.
+```py
+def division ( a , b ) :
+    return a//b , a % b
+```
+
+
+Variables globales et locales
+
+Les variables définies à l'extérieur d'une fonction sont des variablesglobales. Leur contenu est visible de l'intérieur d'une fonction.
+
+Si l’on veut accéder à une variable globale à l’intérieur d’une fonction, on utilise le mot-clé global en Python.
+
+
+
+
+### Variables globales et locales
+
+De manière générale, si elle n’y est pas explicitement déclarée comme globale, une variable x est locale à la fonction dans le corps de laquelle elle est affectée.
+
+Elle est globale si elle est utilisée dans la fonction sans être affectée ou si elle est déclarée globale.
+```py
+def f( ):
+    global a
+    a = a + 1
+    c = 2 * a
+    return a + b + c
+```
+Dans cette fonction, a est globale car elle est déclarée comme telle,
+b est globale car elle est utilisée mais non affectée et c est locale car
+elle est affectée mais n’est pas déclarée globale
+
+
+### Fonction anonyme (lambda function)
+
+Le mot-clé lambda en Python permet la création de fonctions anonymes (i.e. sans nom et donc non définie par def)
+```py
+f = lambda x : x * x
+print(f ( 3 ))
+Ou peut également préciser plusieurs arguments, voire même des
+valeurs par défaut :
+print(g =lambda x , y = 2 : x * y)
+print(g(5, 7))
+print(g(5))
+```
+
+
+
+### Fonctions récursives
+
+Une fonction est dite récursive si elle appelle elle-même : on parle alors d’appel récursif de la fonction
+Version itérative :
+```py
+def fact(n) :
+    if n==1 :
+        return 1
+    else:
+        return n* fact(n-1)
+```
+
+
+## Les chaînes de caractères Python
+
+Une chaîne de caractères est une suite finie de caractères consécutifs, qu’on note entre apostrophes ou guillemets .
+
+- Le type string
+```py
+a="L'informatique est ..."
+print (a)
+b='"PC" : Personnel Computer'
+print(b)
+```
+
+- La séquence `\n` dans une chaine provoque un saut à la ligne.
+
+- La séquence `'` permet d’insérer une apostrophe dans une chaîne délimitée par des apostrophes.
+
+
+
+### Accès à un caractère
+
+-  Chaque caractère de la chaine peut être désigné par sa place dans la séquence, à l’aide d’un index ou indice
+```py
+a="L'informatique est ..."
+print (a[0], a[1], a[9])
+```
+### Concaténation :
+-  On concatène deux chaînes à l’aide de l’opérateur + Longueur :
+
+On utilise la fonction len( ) pour obtenir la longueur d’une chaîne
+
+### Sous-chaîne :
+
+`a[n:m] :` n index de début, m-1 index de fin
+
+`a[:m] :` sous chaîne de m caractères à partir du premier caractère
+
+`a[n:] :` sous chaîne extraite à partir de l’index n
+
+Exemple : 
+```py
+print(a[2:6])
+```
+
+
+
+
+### La répétition
+
+-  On répète une chaîne à l’aide de l’opérateur *
+    -  Exemple : `print(a*2)`
+- Test d’appartenance :
+    -  Il est possible de tester la présence d’une sous-chaîne dans une chaîne. (`in`)
+-  Exemple :
+```py
+a="L'informatique est ..."
+print('est' in a) # True
+```
+
+Les chaînes ne sont modifiables
+```shell
+>>> a[0]='M'
+```
+
+
+
+- Fonctions `ord()` et `chr()`
+
+```shell
+>>> ord('a') # 97
+```
+```shell
+>>> chr(97) #‘a’
+```
+
+- Parcours d’une séquence : l’instruction for ... in ...
+```py
+a="L'informatique est ..."
+for i in a:
+print (i)
+```
+
+- Les chaînes sont des objets
+
+Sous Python, les chaînes sont des objets pour les quels on peut
+appliquer un certain nombre de méthodes (fonctions)
+
+**Exemple :**
+
+```py
+
+ a="L'informatique est ..."
+
+ print(a.upper()) # L'INFORMATIQUE EST  ...
+
+```
+```py
+a.find('e') # retourne l’index du caractère dans la chaine s’il existe.
+#retourne -1 si le caractère n’existe pas dans la chaine
+a.count('e')# compter le nombre d’occurrences d’une sous chaîne dans la chaine
+a.split() : # transforme une chaine en une liste de sous-chaines
+split() # ["L'informatique", 'est', '...']
+join(liste) # rassemble une liste de chaines en une seule
+lower() # convertit une chaine en minuscules
+upper() # convertit une chaine en majuscules
+title() # convertit en majuscule l’initiale de chaque mot
+capitalize() # variante de la précédente. Convertit en 
+# majuscule seulement la première lettre de la chaine :
+swapcase()#  convertit toutes les majuscules en minuscules, et vice-versa
+strip() # enlève les espaces éventuels au début et à la fin de la chaine
+lstrip()
+rstrip()
+replace(c1, c2) # remplace tous les caractères c1 par des caractères c2 dans la chaine.
+```
+
+##     listes
+
+Les listes sont des collections ordonnées et modifiables d'éléments éventuellement hétérogènes. On peut créer des listes en utilisant des méthodes telles que `list()`, `[]`, range, etc. Pour accéder aux éléments d'une liste, on utilise les mêmes méthodes que pour accéder aux caractères d'une chaîne. Les listes peuvent être parcourues à l'aide de boucles for, `range()` et `len()`. Elles sont modifiables, ce qui permet de construire des listes de grande taille de manière dynamique. On peut utiliser le découpage en tranches (slicing) pour ajouter, supprimer ou remplacer des éléments dans une liste. Les listes sont des objets en Python, ce qui signifie qu'elles supportent un certain nombre de méthodes. On peut effectuer des opérations telles que la concaténation et la multiplication sur les listes. Il est également possible de copier une liste.
+
+**Exemples :**
+
+```py
+# Création d'une liste
+liste1 = [1, 2, 3, 4, 5]
+liste2 = list(range(1, 6))
+
+# Accès aux éléments d'une liste
+print(liste1[0])  # Affiche 1
+print(liste2[2:4])  # Affiche [3, 4]
+
+# Parcours d'une liste avec une boucle for
+for element in liste1:
+    print(element)
+
+# Modification d'une liste
+liste1[2] = 10
+print(liste1)  # Affiche [1, 2, 10, 4, 5]
+
+# Recherche dans une liste
+if 3 in liste1:
+    print("L'élément 3 est présent dans la liste")
+else:
+    print("L'élément 3 n'est pas présent dans la liste")
+
+# Copie d'une liste
+liste3 = liste1.copy()
+```
+
+##     tuples
+
+Les tuples sont des types de données composites similaires aux listes, mais ils sont immuables, c'est-à-dire qu'ils ne peuvent pas être modifiés une fois créés. On peut effectuer sur les tuples toutes les opérations des listes, à l'exception de celles qui permettent la modification. Les tuples sont définis à l'aide de différentes syntaxes et peuvent contenir des valeurs de différents types.
+
+**Exemples :**
+
+```py
+# Création d'un tuple
+tuple1 = (1, 2, 3)
+tuple2 = tuple([4, 5, 6])
+
+# Accès aux éléments d'un tuple
+print(tuple1[0])  # Affiche 1
+print(tuple2[1:])  # Affiche (5, 6)
+
+# Parcours d'un tuple avec une boucle for
+for element in tuple1:
+    print(element)
+
+# Recherche dans un tuple
+if 3 in tuple1:
+    print("L'élément 3 est présent dans le tuple")
+else:
+    print("L'élément 3 n'est pas présent dans le tuple")
+```
+
+##  dictionnaire
+
+Les dictionnaires sont des structures de données composées d'éléments non ordonnés, indexés par des clés. Ils sont modifiables comme les listes et peuvent contenir des valeurs numériques, des chaînes, des listes, des tuples, des dictionnaires, des fonctions, des classes ou des instances. On peut créer un dictionnaire en utilisant la syntaxe `{}` ou en utilisant le constructeur `dict()`. Les dictionnaires permettent de faire des opérations telles que la création, le parcours, la recherche et la modification des éléments.
+
+**Exemples :**
+
+```py
+
+# Création d'un dictionnaire
+dictionnaire1 = {'fruit': 'pomme', 'couleur': 'rouge', 'prix': 2.5}
+dictionnaire2 = dict(nom='John', age=30, ville='Paris')
+
+# Accès aux éléments d'un dictionnaire
+print(dictionnaire1['fruit'])  # Affiche 'pomme'
+print(dictionnaire2.get('age'))  # Affiche 30
+
+# Parcours d'un dictionnaire avec une boucle for
+for cle, valeur in dictionnaire1.items():
+    print(cle, '=', valeur)
+
+# Recherche dans un dictionnaire
+if 'prix' in dictionnaire1:
+    print("Le prix est présent dans le dictionnaire")
+
+# Modification d'un dictionnaire
+dictionnaire1['couleur'] = 'vert'
+dictionnaire2['age'] = 35
+
+# Suppression d'un élément d'un dictionnaire
+del dictionnaire1['fruit']
+dictionnaire2.pop('ville')
+
+# Copie d'un dictionnaire
+dictionnaire3 = dictionnaire1.copy()
+```
+
+##     ensembles (sets)
+
+Les ensembles, ou sets en anglais, sont des structures de données qui modélisent la notion mathématique d'ensemble. Ils peuvent contenir des valeurs de types différents, mais chaque valeur ne peut apparaître qu'une seule fois dans l'ensemble. Les ensembles sont créés en utilisant la syntaxe {} ou en utilisant le constructeur set(). Les ensembles ne sont pas ordonnés, ce qui signifie qu'on ne peut pas y accéder par un indice. Les ensembles supportent des opérations ensemblistes telles que l'intersection, l'union et la différence.
+
+**Exemples :**
+
+```py
+# Création d'un ensemble
+ensemble1 = {1, 2, 3, 4, 5}
+ensemble2 = set([4, 5, 6, 7])
+
+# Accès aux éléments d'un ensemble (non applicable)
+
+# Parcours d'un ensemble avec une boucle for
+for element in ensemble1:
+    print(element)
+
+# Opérations sur les ensembles
+ensemble_intersection = ensemble1.intersection(ensemble2)
+ensemble_union = ensemble1.union(ensemble2)
+ensemble_difference = ensemble1.difference(ensemble2)
+
+# Test d'appartenance
+if 3 in ensemble1:
+    print("L'élément 3 est présent dans l'ensemble")
+else:
+    print("L'élément 3 n'est pas présent dans l'ensemble")
+```
