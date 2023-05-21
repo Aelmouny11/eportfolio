@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+      @apply text-lg leading-6;
+    }
   img {
     @apply w-full  rounded-xl print:block print:break-inside-avoid;
   }

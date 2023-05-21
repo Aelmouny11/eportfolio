@@ -1,12 +1,21 @@
 import { isMobile, browserName } from "react-device-detect";
+const BROWSERS_SUPPORTED = [
+  "chrome",
+  "chromium",
+  "opera",
+  "edge",
+  "brave",
+  "vivaldi",
+  // Add more Chromium-based browsers if needed
+];
 
 export const Download = () => {
   function PrintPage() {
-    if (browserName == "Chrome") {
+    if (BROWSERS_SUPPORTED.includes(browserName.toLowerCase())) {
       window.print();
       return true;
     }
-    alert("Téléchargement est Disponible seulement sur  Navigateur  Chrome.");
+    alert("Works only in chromium based browsers.");
     return false;
   }
   if (!isMobile) {

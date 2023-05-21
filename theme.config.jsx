@@ -66,6 +66,9 @@ const themeconfig = {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+
+        <meta charset="UTF-8" />
+
         <meta property="og:url" content={url} />
         <meta property="og:title" content={frontMatter.title || "Elmoumny"} />
         <meta
