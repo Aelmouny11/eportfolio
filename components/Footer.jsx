@@ -13,9 +13,9 @@ const Footer = () => {
 
         <div>
           <span className="footer-title">Legal</span>
-          <a className="link-hover link">Terms of use</a>
-          <a className="link-hover link">Privacy policy</a>
-          <a className="link-hover link">Cookie policy</a>
+          <span className="link-hover link">Terms of use</span>
+          <span className="link-hover link">Privacy policy</span>
+          <span className="link-hover link">Cookie policy</span>
         </div>
       </footer>
       <footer className="footer border-t border-base-300 px-10  py-4">
