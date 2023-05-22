@@ -1,0 +1,135 @@
+# Exercice 1 :
+
+
+```python
+suite[0]=1
+suite[1]=3
+for i in range(2,8):
+    suite.append(suite[i-1] + suite[i-2])
+    print(i,"\t",i-1,"\t",i-2)
+print(suite)
+```
+
+    2 	 1 	 0
+    3 	 2 	 1
+    4 	 3 	 2
+    5 	 4 	 3
+    6 	 5 	 4
+    7 	 6 	 5
+    [1, 3, 4, 7, 11, 18, 29, 47, 4, 7, 11, 18, 29, 47]
+
+
+# Exercice 2 :
+
+
+```python
+def inverse_tuple(Tuple:tuple):
+    return Tuple[::-1]
+inverse_tuple(('e','er','rrf'))
+```
+
+
+
+
+    ('rrf', 'er', 'e')
+
+
+
+# Exercice 3 :
+
+
+```python
+def swap_tuple(Tuple1,Tuple2):
+    list1=list(Tuple1)
+    list2=list(Tuple2)
+    list1,list2=list2,list1
+    return tuple(list2),tuple(list1)
+swap_tuple(('hgfgf','gfdfdf'),('2','33'))
+```
+
+
+
+
+    (('hgfgf', 'gfdfdf'), ('2', '33'))
+
+
+
+# Exercice 4 :
+
+
+```python
+import timeit
+
+T=([34,3],[3,4],[34,3],[3,4],[34,3],[3,4],[34,3],[3,4],[34,3],[3,4],[34,3],[3,4],[34,3],[3,4])
+
+
+def find_replace(Tuple,target,new_value):
+    for item in Tuple:
+        for j,value in enumerate(item):
+            if value==target:
+                item[j]=new_value
+                return 0;
+                
+def modifier(Tuple,target,new_value):
+    for liste in Tuple:
+        if target in liste:
+            index =liste.index(target)
+            liste[index]=new_value
+            break
+        return Tuple
+                
+starttime = timeit.default_timer()
+find_replace(T,3,7)
+find_replace(T,3,7)
+print("The time difference is :", timeit.default_timer() - starttime)
+
+
+starttime = timeit.default_timer()
+modifier(T,3,7)
+modifier(T,3,7)
+print("The time difference for modifier is :", timeit.default_timer() - starttime)
+# print(T)
+        
+```
+
+    The time difference is : 9.168699762085453e-05
+    The time difference for modifier is : 6.434000533772632e-05
+
+
+# Exercice 5 :
+
+
+```python
+L1=["Maroc", "Egypte", "France", "ltalie"]
+L2=["-Rabat", "-Carr", "-Paris", "-Rome"]
+L3=[]
+for i,j in zip(L1,L2):
+    print('{}{}'.format(i,j))
+    L3.append('{}{}'.format(i,j))
+
+L3
+
+```
+
+    Maroc-Rabat
+    Egypte-Carr
+    France-Paris
+    ltalie-Rome
+
+
+
+
+
+    ['Maroc-Rabat', 'Egypte-Carr', 'France-Paris', 'ltalie-Rome']
+
+
+
+# Exercice 5 :
+
+
+
+```python
+def tri_ville_degrees(dv):
+    return dv.sort()
+
+```

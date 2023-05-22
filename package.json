@@ -18,6 +18,7 @@
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
     "next": "^13.4.2",
+    "next-compose-plugins": "^2.2.1",
     "next-pwa": "^5.6.0",
     "nextra": "^2.5.2",
     "nextra-theme-docs": "^2.5.2",

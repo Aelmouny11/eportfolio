@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useConfig } from "nextra-theme-docs";
 import Footer from "./components/Footer";
+
 // import CustomHead from "./components/CustomHead";
 const themeconfig = {
   nextThemes: { defaultTheme: "System" },
@@ -41,7 +42,7 @@ const themeconfig = {
     ),
   },
   head: () => {
-    const { asPath, defaultLocale, locale } = useRouter();
+    const { asPath } = useRouter();
     const { frontMatter } = useConfig();
     const basePath = useRouter().basePath;
     const url = `${basePath}${asPath}`;
@@ -65,7 +66,7 @@ const themeconfig = {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
+        {/* <link rel="manifest" href="/site.webmanifest" /> */}
 
         <meta charset="UTF-8" />
 

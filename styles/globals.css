@@ -15,18 +15,23 @@
   a {
     @apply text-blue-500;
   }
-  table {
-    @apply w-full border-collapse rounded-lg;
+  table tbody tr {
+    @apply w-full ;
   }
   thead {
-    @apply rounded-t-lg bg-blue-500/30;
+    @apply  bg-blue-500/30 w-full;
   }
-  th:first-child {
+  /* th:first-child {
     @apply rounded-tl-lg;
-  }
+  }*/
+
   table tbody {
-    @apply rounded-b-lg;
+    @apply w-full ;
+  } 
+  table {
+    @apply mx-auto;
   }
+  
   h1,
   h2,
   h3,
@@ -37,11 +42,11 @@
   }
 }
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
+} */
 
 /* @media (prefers-color-scheme: light) {
   :root {
@@ -50,14 +55,14 @@
     --background-end-rgb: 0, 0, 0;
   }
 } */
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
-}
+} */

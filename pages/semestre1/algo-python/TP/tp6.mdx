@@ -1,0 +1,125 @@
+---
+title: "tp6"
+---
+# TP6
+## Exercice 1: copier des caracteres
+
+
+```python
+def copier(str1:str,str2:str):
+    return str1[:len(str1)//2]+ str2[:len(str2)//2]
+
+print(copier('welcome','world'))
+```
+
+    welwo
+
+
+## Exercice 2 : palindrome
+
+
+```python
+def plaindrome(target:str):
+    result='.'.join(filter(lambda x: x.isdigit()  or x.isspace(),target))
+    length=len(result)
+    for i in range(length):
+        if target[i] == target[length-i-1]:
+            pass
+        else: return False
+    return  True
+plaindrome('alla?')
+```
+
+
+
+
+    True
+
+
+
+## Exercice 3 : Distance de Hamming
+
+### 1 DistanceH
+
+
+```python
+def distanceH(s1:str,s2:str):
+    if len(s1)!=len(s2):
+        print('{} and {} do not have the same length'.format(s1,s2))
+        return -1
+    distance=0
+    for i in range(len(s1)):
+        if s1[i]!=s2[i]:
+            distance+=1
+    return distance
+
+# Testing
+distanceH('aabbcc','xaybzc')
+
+```
+
+
+
+
+    3
+
+
+
+### 2 Distance hamming entre deux entiers
+#### a binaire(N)
+
+
+```python
+def binaire(n):
+    binary_str = bin(n)[2:]  # remove the '0b' prefix from the binary string
+    return binary_str.zfill(8)
+
+# Testing
+binaire(8)
+```
+
+
+
+
+    '00001000'
+
+
+
+
+```python
+def binaire2(n:int):
+    binaire_str=''
+    n_temp=n
+    while n_temp>0:
+        binaire_str=str(n_temp%2)+binaire_str
+        n_temp//=2
+    return '0'*(8-len(binaire_str))+binaire_str
+
+# Testing
+binaire2(8)
+
+```
+
+
+
+
+    '00001000'
+
+
+
+#### DistanceNombre(A,B)
+
+
+```python
+def distanceNombre(a:int,b:int):
+    return distanceH(binaire2(a),binaire2(b))
+# Testing
+distanceNombre(8,7)
+```
+
+
+
+
+    4
+
+

@@ -1,0 +1,128 @@
+---
+title: "Td5"
+---
+# TD5
+##
+## 
+
+
+```python
+Temperature = {"France" :[6,8,9,13,20,23,26,35,30,25,18,11], "Australie" : [30,35,20,19,17,15,10,15,21,26,27,31] }
+Mois=['Janvier','Fevrier','Mars','Avril','Mai','Juin',
+                'Juillet','Août','Septembre','Octobre','Novembre','Decembre']
+#     for i,month in enumerate(Mois):
+#         print("({} {} {})".format(pays,month))
+```
+
+## 
+
+
+```python
+def AfficheMois(Mois,Temperature,MoisList):
+    month=MoisList.index(Mois)
+    for pays in Temperature:
+        print(pays,Mois,Temperature[pays][month])
+# Test
+AfficheMois('Janvier',Temperature,Mois)
+```
+
+    France Janvier 6
+    Australie Janvier 30
+
+
+## 
+
+
+```python
+def AjouterPays(Temperature:dict,Pays:str,TemperaturesPays:list):
+    Temperature[Pays]=TemperaturesPays
+
+AjouterPays(Temperature,'Bresil',[12,34,565,34,45,45,45,5,6,6,6,6])
+Temperature
+```
+
+
+
+
+    {'France': [6, 8, 9, 13, 20, 23, 26, 35, 30, 25, 18, 11],
+     'Australie': [30, 35, 20, 19, 17, 15, 10, 15, 21, 26, 27, 31],
+     'Bresil': [12, 34, 565, 34, 45, 45, 45, 5, 6, 6, 6, 6]}
+
+
+
+## 
+
+
+```python
+def ModificationPaysMois(Pays:str,Mois:str,TemperatureN:float,Temperature:dict,ListeMois:list):
+    month=ListeMois.index(Mois)
+    Temperature[Pays][month]=TemperatureN
+
+ModificationPaysMois('Bresil','Janvier',13.45,Temperature,Mois)
+Temperature
+```
+
+
+
+
+    {'France': [6, 8, 9, 13, 20, 23, 26, 35, 30, 25, 18, 11],
+     'Australie': [30, 35, 20, 19, 17, 15, 10, 15, 21, 26, 27, 31],
+     'Bresil': [13.45, 34, 565, 34, 45, 45, 45, 5, 6, 6, 6, 6]}
+
+
+
+# Question 2
+##
+
+
+```python
+from functools import reduce
+def MoyennPays(Pays,Temperature):
+        
+        total=reduce(lambda result,value:result+value,Temperature[Pays])
+        return float(total/12)
+print(MoyennPays('France',Temperature))
+```
+
+    18.666666666666668
+
+
+## 
+
+
+```python
+def moyenMois(Temperature:dict,MoisList,Mois):
+    month_index=MoisList.index(Mois)
+    total=0
+    for pays in Temperature:
+        print('{} : {}'.format(Mois,Temperature[pays][month_index]))
+        total+=Temperature[pays][month_index]
+    return float(total/len(Temperature))
+
+print(moyenMois(Temperature,Mois,'Janvier'))
+# print(Temperature)
+```
+
+    Janvier : 6
+    Janvier : 30
+    Janvier : 13.45
+    16.483333333333334
+
+
+## 
+
+
+```python
+def MoyenMax(Temperature):
+    max=0
+    pay_target=''
+    for pays in Temperature:
+        if MoyennPays(pays,Temperature)>max:
+            max=MoyennPays(pays,Temperature)
+            pay_target=pays
+    return max,pay_target
+print(MoyenMax(Temperature))
+```
+
+    (67.53750000000001, 'Bresil')
+
