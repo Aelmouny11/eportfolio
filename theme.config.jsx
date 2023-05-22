@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 // import CustomHead from "./components/CustomHead";
 const themeconfig = {
-  nextThemes: { defaultTheme: "System" },
+  nextThemes: { defaultTheme: "dark" },
   toc: {
     title: "Dans Ce page",
   },
