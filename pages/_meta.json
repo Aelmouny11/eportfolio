@@ -31,5 +31,9 @@
     }
   },
   "semestre1": "Semestre 1",
-  "Semestre-2": "Semestre 2"
+  "Semestre-2": "Semestre 2",
+  "404": {
+    "title": "404",
+    "type": "page"
+  }
 }

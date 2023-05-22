@@ -15,7 +15,7 @@ export default function PyCode({ pythoncode }) {
         <textarea
           onChange={(e) => setInput(e.target.value)}
           placeholder="Enter your code here"
-          value={pythoncode}
+          value={pythoncode }
         />
         <input
           type="submit"
