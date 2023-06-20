@@ -7,7 +7,7 @@
     @apply leading-6 md:text-lg;
   }
   img {
-    @apply w-full  rounded-xl print:block print:break-inside-avoid;
+    @apply w-full rounded-xl print:block print:break-inside-avoid;
   }
   strong {
     @apply text-blue-500;
@@ -19,7 +19,7 @@
     @apply w-full ;
   }
   thead {
-    @apply  bg-blue-500/30 w-full;
+    @apply  w-full bg-blue-500/30;
   }
   /* th:first-child {
     @apply rounded-tl-lg;
