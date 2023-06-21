@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer base {
+ 
   body {
     @apply leading-6 md:text-lg;
   }
@@ -38,8 +39,9 @@
   h4,
   h5,
   h6 {
-    @apply capitalize;
+    @apply text-indigo-500 capitalize;
   }
+  
 }
 
 /* :root {

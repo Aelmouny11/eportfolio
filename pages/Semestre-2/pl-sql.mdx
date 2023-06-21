@@ -415,17 +415,15 @@ FROM nomTable [WHERE condition];
 > - Les échanges entre l’application et la BD sont réalisés grâce à des curseurs : zones de travail capables de stocker plusieurs enregistrements et de gérer l’accès à ces enregistrements
 > - Permet un traitement séquentiel des enregistrements retournés
 
-import { Mermaid } from "mdx-mermaid/Mermaid";
-
-<Mermaid
-  chart={`graph LR
+```mermaid
+graph LR
 A[Types de curseurs]
 A --> B[Curseurs implicites]
 A --> C[Curseurs explicites]
 B --> D[PL/SQL utilise un curseur implicite pour chaque opération du LMD de SQL INSERT, UPDATE et DELETE]
 C --> E[Déclarés et manipulés par l'utilisateur]
-E --> F[Pour les interrogations qui retournent plus d'un enregistrement]`}
-/>
+E --> F[Pour les interrogations qui retournent plus d'un enregistrement]
+```
 
 ### CURSEURS IMPLICITES
 
@@ -783,4 +781,135 @@ BEGIN
 -- instruction SQL et PL/SQL
 END [nomDeclencheur];
 /
+```
+
+## Controle
+
+```mermaid
+classDiagram
+    class EMPLOYE {
+        + NEMP (PK)
+        + NOMEMP
+        + QEMP
+    }
+
+    class CHANTIER {
+        + NCH (PK)
+        + NOMCH
+        + ADRCH
+    }
+
+    class VEHICULE {
+        + NVEH (PK)
+        + MARQUE
+        + PUIS
+        + KMSCT
+    }
+
+    class DEPLACEMENT {
+        + NDEP (PK)
+        + NCH# (FK)
+        + NVEH# (FK)
+        + DTDEP
+        + DTRET
+        + KMD
+        + KMA
+        + COND
+    }
+
+    class TRANSPORTE {
+        + NDEP# (PK, FK)
+        + NEMP# (PK, FK)
+    }
+
+    EMPLOYE "1" -- "0..*" TRANSPORTE
+    CHANTIER "1" -- "0..*" DEPLACEMENT
+    VEHICULE "1" -- "0..*" DEPLACEMENT
+    DEPLACEMENT "1" -- "0..*" TRANSPORTE
+    EMPLOYE "1" -- "0..*" DEPLACEMENT : COND
+```
+
+### EMPLOYE table
+
+```sql
+CREATE TABLE EMPLOYE (
+  NEMP INT PRIMARY KEY,
+  NOMEMP VARCHAR(100),
+  QEMP VARCHAR(100)
+);
+
+INSERT INTO EMPLOYE (NEMP, NOMEMP, QEMP)
+VALUES (1, 'John Doe', 'Manager'),
+       (2, 'Jane Smith', 'Engineer'),
+       (3, 'Alice Johnson', 'Technician');
+```
+
+### CHANTIER
+
+```sql
+CREATE TABLE CHANTIER (
+  NCH INT PRIMARY KEY,
+  NOMCH VARCHAR(100),
+  ADRCH VARCHAR(100)
+);
+
+INSERT INTO CHANTIER (NCH, NOMCH, ADRCH)
+VALUES (1, 'Chantier A', '123 Main Street'),
+       (2, 'Chantier B', '456 Elm Street'),
+       (3, 'Chantier C', '789 Oak Street');
+```
+
+### VEHICULE
+
+```sql
+CREATE TABLE VEHICULE (
+  NVEH INT PRIMARY KEY,
+  MARQUE VARCHAR(100),
+  PUIS INT,
+  KMSCT INT
+);
+
+INSERT INTO VEHICULE (NVEH, MARQUE, PUIS, KMSCT)
+VALUES (1, 'Toyota', 150, 10000),
+       (2, 'Honda', 120, 8000),
+       (3, 'Ford', 180, 12000);
+```
+### DEPLACEMENT
+
+```sql
+CREATE TABLE DEPLACEMENT (
+  NDEP INT PRIMARY KEY,
+  NCH INT,
+  NVEH INT,
+  DTDEP DATE,
+  DTRET DATE,
+  KMD INT,
+  KMA INT,
+  COND INT,
+  FOREIGN KEY (NCH) REFERENCES CHANTIER(NCH),
+  FOREIGN KEY (NVEH) REFERENCES VEHICULE(NVEH)
+);
+
+INSERT INTO DEPLACEMENT (NDEP, NCH, NVEH, DTDEP, DTRET, KMD, KMA, COND)
+VALUES (1, 1, 1, '2023-06-01', '2023-06-03', 10000, 10500, 1),
+       (2, 2, 2, '2023-06-02', '2023-06-04', 8000, 8400, 2),
+       (3, 3, 3, '2023-06-03', '2023-06-05', 12000, 12200, 3);
+```
+
+### TRANSPORTE
+
+```sql
+CREATE TABLE TRANSPORTE (
+  NDEP INT,
+  NEMP INT,
+  PRIMARY KEY (NDEP, NEMP),
+  FOREIGN KEY (NDEP) REFERENCES DEPLACEMENT(NDEP),
+  FOREIGN KEY (NEMP) REFERENCES EMPLOYE(NEMP)
+);
+
+INSERT INTO TRANSPORTE (NDEP, NEMP)
+VALUES (1, 2),
+       (1, 3),
+       (2, 1),
+       (3, 1);
 ```

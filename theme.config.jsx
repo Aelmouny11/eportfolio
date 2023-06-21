@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 // import CustomHead from "./components/CustomHead";
 const themeconfig = {
   nextThemes: { defaultTheme: "light" },
-  toc: false,
+  toc: { component: "" },
   editLink: { text: "" },
   logo: (
     <Image
@@ -17,6 +17,7 @@ const themeconfig = {
       alt="Azdddine's ePortfolio Logo bg-white rounded-full bg-white"
     />
   ),
+  gitTimestamp: "",
   project: {
     link: "https://github.com/aelmouny11/eportfolio",
   },
@@ -26,8 +27,8 @@ const themeconfig = {
   darkMode: true,
   sidebar: {
     toggleButton: true,
-    defaultMenuCollapseLevel: 1,
-    autoCollapse: false,
+    defaultMenuCollapseLevel: 0,
+    autoCollapse: true,
   },
   search: {
     placeholder: "Rechercher Les Documents...",
