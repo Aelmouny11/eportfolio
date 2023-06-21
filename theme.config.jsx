@@ -5,10 +5,8 @@ import Footer from "./components/Footer";
 
 // import CustomHead from "./components/CustomHead";
 const themeconfig = {
-  nextThemes: { defaultTheme: "dark" },
-  toc: {
-    title: "Dans Ce page",
-  },
+  nextThemes: { defaultTheme: "light" },
+  toc: false,
   editLink: { text: "" },
   logo: (
     <Image
@@ -28,15 +26,14 @@ const themeconfig = {
   darkMode: true,
   sidebar: {
     toggleButton: true,
+    defaultMenuCollapseLevel: 1,
+    autoCollapse: false,
   },
   search: {
     placeholder: "Rechercher Les Documents...",
 
     emptyResult: (
-      <span
-        className="h-ful fle w-full
-		 items-center justify-center bg-blue-300"
-      >
+      <span className="h-ful fle w-full items-center justify-center bg-blue-300">
         Aucune Resultat
       </span>
     ),
