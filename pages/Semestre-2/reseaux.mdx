@@ -1,1 +1,106 @@
-# Réseux
+---
+title: "Réseau"
+---
+
+# Réseau
+
+**Bande passante :**
+
+Bande de fréquences dans laquelle les signaux appliques à
+l’ entrée du support ont une puissance de sortie supérieure à un seuil donne
+(après traversée du support de transmission)
+
+**Bruits et distorsions**
+
+- Certaines perturbations de l'environnement introduisent également des
+  bruits (orages pour le milieu aérien, champs électromagnétiques dans des
+  ateliers pour les supports métalliques...)
+- Les supports affaiblissent et retardent les signaux. Par exemple, la distance
+  est un facteur d’affaiblissemen
+
+**Capacite limitée:**
+
+La capacite d'un support de transmission mesure la quantité d'informations transportée par unité de temps. L'ensemble des
+caractéristiques que nous venons de voir fait que la capacite d’un support est
+limitée
+
+**Le théorème de Shannon**
+
+exprime, en bits par seconde, la borne
+maximale de la capacite CapMax d'un support de transmission:
+
+$$Cap_{Max} = B \times log_2 (1 + \frac{S}{N} )$$
+
+- B est la largeur de la bande passante du support de transmission exprimée
+  en hertz
+- $\frac{S}{N}$ représente la valeur du rapport entre la puissance du signal (notée S) et la
+  puissance du bruit (Noise) (notée N)
+- La base 2 du logarithme sert a exprimer la quantité d'informations en bits
+
+<div class="p-2 border border-red-400 rounded-md bg-red-50">
+  $\frac{S}
+  {N}$ est souvent donne en dB: $\frac{S}
+  {N}(dB)$ = 10 $log_{10} \frac{S}
+  {N}$
+</div>
+
+## Les protocoles de liaison de données
+
+### Définition
+
+Un protocole est un ensemble de règles et de formats de données
+à respecter pour échanger des données dans de bonnes conditions entre deux
+équipements ou deux programmes. Un protocole de liaison de données a pour
+objet de rendre fiable le circuit de données.
+
+### Rôle et fonctions d’un protocole de liaison
+
+- Le circuit de données altère les informations transportées
+- Le protocole de liaison de données le supervise et définit un ensemble de règles pour
+  assurer la fiabilité des échanges sur une liaison de données
+- Le protocole spécifie le format des unités de données échangées (les trames), leur
+  délimitation, les moyens de contrôler leur validité (parité, code polynomial...), ainsi que
+  le mode de correction des erreurs détectées
+- Il fixe également les règles du dialogue entre les deux extrémités de la liaison
+- Il exerce en outre deux fonctions importantes : le contrôle de flux (mécanisme vérifiant
+  le rythme d’envoi des informations) et la gestion des acquittements (mécanisme
+  validant la réception des informations)
+- Un protocole est un ensemble de règles et de formats de données à respecter pour
+  échanger des données dans de bonnes conditions entre deux équipements ou deux
+  programmes.
+- Un protocole de liaison de données a pour objet de rendre fiable le circuit de données
+  - Le circuit de données transmet des éléments binaires
+  - Le protocole de liaison de données travaille sur des blocs d’éléments binaires
+    appelés « Trames »
+  - La trame est donc l’unité de données que gère le protocole : - Une trame compte différents champs - Chacun d’eux est un bloc d’éléments binaires dont la signification et
+    l’interprétation sont précisées dans la définition du protocole
+- Ainsi un protocole sert à préciser :
+
+  - Le format des trames échangées
+  - Les conditions de délimitation des trames (début et fin) et leur validité
+  - La position et la signification des différents champs d’une trame
+  - La technique de détection d’erreur utilisée
+  - Les règles du dialogue (supervision de la liaison)
+  - Les procédures à respecter après détection d’erreurs ou de panne de la
+    liaison
+
+![](/s2/reseau/reseau--01.png)
+![](/s2/reseau/reseau--02.png)
+![](/s2/reseau/reseau--03.png)
+![](/s2/reseau/reseau--04.png)
+![](/s2/reseau/reseau--05.png)
+![](/s2/reseau/reseau--06.png)
+![](/s2/reseau/reseau--07.png)
+![](/s2/reseau/reseau--08.png)
+![](/s2/reseau/reseau--09.png)
+![](/s2/reseau/reseau--10.png)
+![](/s2/reseau/reseau--11.png)
+![](/s2/reseau/reseau--12.png)
+![](/s2/reseau/reseau--13.png)
+![](/s2/reseau/reseau--14.png)
+![](/s2/reseau/reseau--15.png)
+![](/s2/reseau/reseau--16.png)
+![](/s2/reseau/reseau--17.png)
+![](/s2/reseau/reseau--18.png)
+![](/s2/reseau/reseau--19.png)
+![](/s2/reseau/reseau--20.png)

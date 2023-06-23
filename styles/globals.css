@@ -8,7 +8,7 @@
     @apply leading-6 md:text-lg;
   }
   img {
-    @apply w-full rounded-xl print:block print:break-inside-avoid;
+    @apply w-full border rounded-xl print:block print:break-inside-avoid;
   }
   strong {
     @apply text-blue-500;
