@@ -14,16 +14,22 @@ export const Download = () => {
       window.print();
       return true;
     }
-    alert("Works only in chromium based browsers.");
+    alert(`Works only in chromium based browsers.: Use one of the following browsers:
+    - Chrome
+    - MS Edge
+    - Brave
+    - Opera
+    - Vivaldi
+    - Chromium`);
     return false;
   }
   if (isMobile) {
     return <></>;
   }
   return (
-    <div className="  flex justify-end print:hidden">
+    <div className="flex justify-end print:hidden">
       <button
-        className="btn-ghost flex items-center gap-2 p-1"
+        className="flex items-center gap-2 p-1 btn-ghost"
         onClick={() => PrintPage()}
         alt="Download"
       >
@@ -31,7 +37,7 @@ export const Download = () => {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          className="h-4 w-4"
+          className="w-4 h-4"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"

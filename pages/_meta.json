@@ -1,4 +1,10 @@
 {
+  "*": {
+    "theme": {
+      "sidebar": false,
+      "breadcrumb": false
+    }
+  },
   "cermef": {
     "title": "CERMEF",
     "type": "page"
@@ -30,10 +36,86 @@
       }
     }
   },
-  "semestre1": "Semestre 1",
-  "Semestre-2": "Semestre 2",
-  "404": {
-    "title": "404",
-    "type": "page"
+  "semestre1": {
+    "title": "Semestre 1",
+    "type": "menu",
+    "items": {
+      "architecture": {
+        "title": "Architecture",
+        "path": "/semestre1/architecture"
+      },
+      "didactique": {
+        "title": "Didactique",
+        "path": "/semestre1/didactique"
+      },
+      "gestion-1": {
+        "title": "Gestion 1",
+        "path": "/semestre1/gestion-1"
+      },
+      "methodologie_recherche": {
+        "title": "Méthodologie de Recherche",
+        "path": "/semestre1/methodologie_recherche"
+      },
+      "Plannification": {
+        "title": "Plannification",
+        "path": "/semestre1/plannification"
+      },
+      "sciences-education": {
+        "title": "Sciences de l'Éducation",
+        "path": "/semestre1/sciences-education"
+      },
+      "tice": {
+        "title": "TICE",
+        "path": "/semestre1/tice"
+      },
+      "algo-python": {
+        "title": "Algo et Python",
+        "path": "/semestre1/algo-python/"
+      }
+    }
+  },
+
+  "Semestre-2": {
+    "title": "Semestre 2",
+    "type": "menu",
+    "items": {
+      "analyse-pratiques": {
+        "title": "Analyse des Pratiques",
+        "path": "/Semestre-2/analyse-pratiques.mdx"
+      },
+      "bases-donnees": {
+        "title": "Bases de Données",
+        "path": "/Semestre-2/bases-donnees.mdx"
+      },
+      "etiques": {
+        "title": "Éthiques",
+        "path": "/Semestre-2/etiques.mdx"
+      },
+
+      "evaluation-diagnostique": {
+        "title": "Évaluation ",
+        "path": "/Semestre-2/evaluation-diagnostique.mdx"
+      },
+      "gestion2": {
+        "title": "Gestion 2",
+        "path": "/Semestre-2/gestion2.mdx"
+      },
+      "la-vie-scolaire": {
+        "title": "La Vie Scolaire",
+        "path": "/Semestre-2/la-vie-scolaire.mdx"
+      },
+      "pl-sql": {
+        "title": "PL/SQL",
+        "path": "/Semestre-2/pl-sql.mdx"
+      },
+      "production-didactique": {
+        "title": "Production Didactique",
+        "path": "/Semestre-2/production-didactique.mdx"
+      },
+      "reseaux": {
+        "title": "Réseaux",
+        "path": "/Semestre-2/reseaux.mdx"
+      }
+    }
   }
 }
