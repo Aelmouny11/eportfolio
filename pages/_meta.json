@@ -84,7 +84,7 @@
         "path": "/Semestre-2/analyse-pratiques.mdx"
       },
       "bases-donnees": {
-        "title": "Bases de Données",
+        "title": "PL/SQL",
         "path": "/Semestre-2/bases-donnees.mdx"
       },
       "etiques": {
@@ -105,7 +105,7 @@
         "path": "/Semestre-2/la-vie-scolaire.mdx"
       },
       "pl-sql": {
-        "title": "PL/SQL",
+        "title": "Base de Données",
         "path": "/Semestre-2/pl-sql.mdx"
       },
       "production-didactique": {

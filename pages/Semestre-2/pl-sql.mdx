@@ -1,3 +1,7 @@
+---
+title: "Les bases de données"
+---
+
 # Les base Données / **SQL**
 
 _Pr. Si Mohammed Snineh_
@@ -5,6 +9,57 @@ _Pr. Si Mohammed Snineh_
 import { Download } from "@/components/Download";
 
 <Download />
+
+```mermaid
+graph TB
+    style A fill:#ECF9FD, stroke:#333, stroke-width:2px;
+    style B fill:#90DCF3, stroke:#333, stroke-width:2px;
+    style C fill:#46C5EC, stroke:#333, stroke-width:2px;
+    style D fill:#46C5EC, stroke:#333, stroke-width:2px;
+    style E fill:#46C5EC, stroke:#333, stroke-width:2px;
+    style F fill:#46C5EC, stroke:#333, stroke-width:2px;
+    style G fill:#46C5EC, stroke:#333, stroke-width:2px;
+    style H fill:#90DCF3, stroke:#333, stroke-width:2px;
+    style I fill:#46C5EC, stroke:#333, stroke-width:2px;
+    style J fill:#46C5EC, stroke:#333, stroke-width:2px;
+    style K fill:#46C5EC, stroke:#333, stroke-width:2px;
+    style L fill:#90DCF3, stroke:#333, stroke-width:2px;
+    style M fill:#90DCF3, stroke:#333, stroke-width:2px;
+    style N fill:#90DCF3, stroke:#333, stroke-width:2px;
+    style O fill:#90DCF3, stroke:#333, stroke-width:2px;
+    style P fill:#90DCF3, stroke:#333, stroke-width:2px;
+    style Q fill:#90DCF3, stroke:#333, stroke-width:2px;
+    style R fill:#90DCF3, stroke:#333, stroke-width:2px;
+    style S fill:#90DCF3, stroke:#333, stroke-width:2px;
+    style T fill:#90DCF3, stroke:#333, stroke-width:2px;
+    style U fill:#90DCF3, stroke:#333, stroke-width:2px;
+
+    subgraph SQL
+    A[SQL and PL/SQL Concepts]:::A --> B[SQL]:::B
+    B --> C[DDL: Data Definition Language]:::C
+    B --> D[DML: Data Manipulation Language]:::D
+    D --> E[SELECT]:::E
+    D --> F[INSERT]:::F
+    D --> G[UPDATE]:::G
+    E --> H[DQL: Data Query Language]:::H
+    H --> I[SELECT]:::I
+    H --> J[Subqueries]:::J
+    H --> K[JOIN]:::K
+    end
+
+    subgraph PL/SQL
+    B --> L[PL/SQL]:::L
+    L --> M[PL/SQL Blocks]:::M
+    L --> N[Variables]:::N
+    L --> O[Control Flow]:::O
+    L --> P[Cursors]:::P
+    L --> Q[Exceptions]:::Q
+    L --> R[Procedures]:::R
+    L --> S[Functions]:::S
+    L --> T[Triggers]:::T
+    L --> U[Packages]:::U
+    end
+```
 
 ## Syntaxe de base
 
@@ -565,7 +620,7 @@ Pour supprimer un déclencheur, on utilise la commande DROP TRIGGER suivie du no
 
 _Sidi Mohamed SNINEH_
 
-  ## AVANTAGES
+## AVANTAGES
 
 Les principaux avantages de PL/SQL sont :
 
